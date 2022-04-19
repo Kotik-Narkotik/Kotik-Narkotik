@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url('../fonts/Bahnschrift.woff2') format('woff2'),
+        url('../fonts/Bahnschrift.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Bahnschrift, sans-serif;
+
+}
+
+body{
+    height: 100vh;
+    background: url(/srs/img/BG.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card{
+    width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card_header{
+    background: #000000;
+    padding: 60px 40px;
+}
+
+.pic{
+    display: inline-block;
+    padding: 8px;
+    background: linear-gradient(130deg, #870000, #190A05);
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    animation: anmated-gradient 2s linear infinite;
+}
+
+@keyframes anmated-gradient{
+    25%{
+        background-position: left bottom;
+    }
+    50%{
+        background-position: right bottom;
+    }75%{
+        background-position: right top;
+    }100%{
+        background-position: left top;
+    }
+}
+
+.pic img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.name{
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.065em;
+    margin: 10px 0 6px 0;
+}
+
+.desc{
+    font-size: 16px;
+    font-weight: 100;
+    color: #A50000;
+    letter-spacing: 0.065em;
+}
+
+.sm{
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+
+}
+.sm a{
+    width: 65px;
+
+}
+
+.telega svg{
+    transition: all .4s ease;
+}
+
+.telega svg:hover{
+    fill: #A50000;
+}
+.Behance svg{
+    transition: all .4s ease;
+}
+
+.Behance svg:hover{
+    fill: #A50000;
+}
+
+.pi svg{
+    transition: all .4s ease;
+}
+
+.pi svg:hover{
+    fill: #A50000;
+}
+
+.inst svg{
+    transition: all .4s ease;
+}
+
+.inst svg:hover{
+    fill: #A50000;
+}
+
+.contact-btn{
+    display: inline-block;
+    padding: 12px 50px;
+    color: #C70000;
+    border: 2px solid #A50000;
+    border-radius: 8px;
+    transition: .3s linear;
+}
+
+.contact-btn:hover{
+    background: #A50000;
+    color: #000000;
+}
+
+.skill_box{
+    margin: 0;
+    padding: 0;
+    font-family: Bahnschrift, sans-serif;
+}
+
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.skill_name{
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.skill_bar{
+    height: 10px;
+    background: #212121;
+    border-radius: 2px;
+}
+
+.skill-per{
+    height: 10px;
+    background: #A50000;
+    border-radius: 2px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+}
+
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #B5B5B5;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #B5B5B5;
+    top: -20px;
+    right: 0;
+    transform: translateX(59%) rotate(45deg);
+    border-radius: 2px;
+}
+
+@keyframes fillBars{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
